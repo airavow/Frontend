@@ -1,123 +1,95 @@
-import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import React from "react";
+
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-        <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+    <footer style={footerStyle}>
+      <div style={contentStyle}>
+        <div style={sectionStyle}>
+          <h4 style={headingStyle}>NanoDx</h4>
+          <p style={textStyle}>Innovative solutions for modern diagnostics</p>
         </div>
 
-        <div>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
-          </a>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='/' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
+        <div style={sectionStyle}>
+          <h4 style={headingStyle}>Quick Links</h4>
+          <ul style={listStyle}>
+            <li style={listItemStyle}><a href="/" style={linkStyle}>Home</a></li>
+            <li style={listItemStyle}><a href="/about" style={linkStyle}>About</a></li>
+            <li style={listItemStyle}><a href="/blog" style={linkStyle}>Blog</a></li>
+            <li style={listItemStyle}><a href="/contact" style={linkStyle}>Contact</a></li>
+          </ul>
         </div>
-      </section>
-      <section className=''>
-        <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
-            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
-                NANO
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
-              </p>
-            </MDBCol>
 
-            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Home
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  About
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Technology
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Search
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
-              </p>
-              <p>
-                <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
-              </p>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
-
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2025 Copyright:
-        <a className='text-reset fw-bold' href='https://airavow.com/'>
-          www.airavow.com
-        </a>
+        <div style={sectionStyle}>
+          <h4 style={headingStyle}>Contact Us</h4>
+          <p style={textStyle}>email@example.com</p>
+          <p style={textStyle}>+1 (123) 456-7890</p>
+        </div>
       </div>
-    </MDBFooter>
+
+      <div style={copyrightStyle}>
+        <p style={textStyle}>© {currentYear} NanoDx. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
+
+// Styles
+const footerStyle = {
+  backgroundColor: '#2c3e50',
+  color: '#ecf0f1',
+  padding: '2rem 0',
+  width: '100%',
+};
+
+const contentStyle = {
+  display: 'flex',
+  justifyContent: 'space-around',
+  flexWrap: 'wrap',
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '0 1rem',
+};
+
+const sectionStyle = {
+  flex: '1',
+  minWidth: '200px',
+  margin: '1rem',
+};
+
+const headingStyle = {
+  color: '#fff',
+  marginBottom: '1rem',
+  fontSize: '1.2rem',
+};
+
+const textStyle = {
+  margin: '0.5rem 0',
+  lineHeight: '1.6',
+};
+
+const listStyle = {
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+};
+
+const listItemStyle = {
+  margin: '0.5rem 0',
+};
+
+const linkStyle = {
+  color: '#ecf0f1',
+  textDecoration: 'none',
+  transition: 'color 0.3s ease',
+};
+
+const copyrightStyle = {
+  textAlign: 'center',
+  marginTop: '2rem',
+  paddingTop: '1rem',
+  borderTop: '1px solid rgba(255,255,255,0.1)',
+};
+
+export default Footer;
