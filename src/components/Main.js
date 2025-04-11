@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route, NavLink, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { Sidebar } from '../ui_components/Sidebar'
 import { Header } from "../ui_components/Header";
 import { Footer } from "../ui_components/Footer";
-import { Home } from "./Home";
+import { Home } from "./Home.js";
 import { About } from "./About";
 import { Blog } from "./Blog";
 
